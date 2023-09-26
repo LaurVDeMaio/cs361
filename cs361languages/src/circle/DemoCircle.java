@@ -54,10 +54,18 @@ public class DemoCircle {
 		c2.radius = 6.0;
 		
 		// TODO print c1 with toString
+		c1.toString();
 		// TODO print c2 with toString
+		c2.toString();
 		// TODO make a deep copy of c1 with clone and assign it to c3
+		
 		// TODO write a conditional that checks that c3.equals(c1) is true and print "c3.equals(c1) is true" or "c3.equals(c1) is false" otherwise
-
+		if(c2.equals(c1)) {
+			System.out.println("c2.equals(c1) is true");
+		}
+		else {
+			System.out.println("c2c3.equals(c1) is false");
+		}
 	}
 
 }

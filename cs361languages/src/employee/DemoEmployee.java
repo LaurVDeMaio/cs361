@@ -4,7 +4,7 @@
 package employee;
 
 /**
- * @author ADD YOUR NAME
+ * @author Lauren DeMaio
  *
  */
 
@@ -31,26 +31,28 @@ public class DemoEmployee {
 		Employee emp3 = pEmp1;
 		System.out.println("emp3");
 		emp3.whoAmI();
-		// TODO To complete
-		// emp3.whoAmI() // prints ... because ...
-		// emp3.getHourlyRate(); // returns syntax error because ...
+		//TODO To complete
+		//emp3.whoAmI() // prints PART TIME EMPLOYEE because emp3 is of type PartTimeEmployee and calls the .whoAmI() of PartTimeEmployee class
+		//emp3.getHourlyRate(); // returns syntax error because Employee does not contain a getHourlyRate() method
 
 		// TODO To complete
 		// Add the condition that test that emp3 is an instance of part time employee at
 		// this time
-		// if (CONDITION) {
-		// System.out.println("emp3 instance of part time employee"); // printed
-		// } else {
+		if (emp3 instanceof PartTimeEmployee) {
+		System.out.println("emp3 instance of part time employee"); // printed
+		} else {
 		System.out.println("emp3 not instance of part time employee");
-		// }
+		}
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		//PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
 		// TODO To complete
 		// This instruction compiles / does not compile
 		// This instruction returns a ClassCastException at run time
-		// because ...
+		// because it is attempting to create a new instance of PartTimeEmployee based off 
+		// an existing variable that is of type Employee but being cast as a PartTimeEmployee
+		// This is because we cannot implicitly downcast a parent object to a child object
 
 		// Downcasting 2
 		// Requires the use of intanceof to avoid a run time cast exception
