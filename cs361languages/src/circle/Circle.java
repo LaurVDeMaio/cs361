@@ -60,6 +60,7 @@ public class Circle extends GraphicObject {
 	 */
 	@Override
 	public String toString() {
+		System.out.println("Circle: centerX = " + this.centerX + " centerY = " + this.centerY + " radius = " + this.radius);
 		return super.toString();
 	}
 
@@ -71,16 +72,20 @@ public class Circle extends GraphicObject {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		Circle circ = (Circle) obj; 
+		if(this.centerX == circ.centerX && this.centerY == circ.centerY && this.radius == circ.radius) {
+			return true;
+		}
+		else {return false;}
 	}
 
 	// TODO To complete
 	/**
 	 * @return an exact copy of the Circle that is a new instance 
 	 */
-	// @Override
-	// protected Object clone() throws CloneNotSupportedException {
-	// return super.clone();
-	// }
+	@Override
+	protected Object clone() throws CloneNotSupportedException {	
+		return super.clone();
+	}
 
 }

@@ -4,7 +4,7 @@
 package reflection;
 
 /**
- * @author ADD YOUR NAME 
+ * @author Lauren DeMaio 
  *
  */
 
@@ -39,13 +39,16 @@ public class Reflection {
 	 * Cn inherits from Cn-1 inherits ... inherits from java.lang.Object
 	 * @param o the object
 	 */
-	public void inheritanceChain(Object o) {
+	public static void inheritanceChain(Object o) {		
 		if (o == null)
 			throw new IllegalArgumentException("Object passesd is null");
-
+		
 		// TODO To complete
 		// You need to use the EXACT format of the output
 		// Hint: Use the method getSuperClass()
+		
+		System.out.println("Inheritance chain:");
+		
 	}
 	
 	/**
@@ -81,6 +84,7 @@ public class Reflection {
 		
 		// Demonstration of the methods on an objet of type String
 		// TODO To complete
+		inheritanceChain(r);
 		
 		// Demonstration of the methods on an objet of type ColoredCircle
 		// TODO To complete		

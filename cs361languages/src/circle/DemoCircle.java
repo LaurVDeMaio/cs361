@@ -4,7 +4,7 @@
 package circle;
 
 /**
- * @author ADD YOUR NAME
+ * @author Lauren DeMaio
  *
  */
 public class DemoCircle {
@@ -53,6 +53,7 @@ public class DemoCircle {
 		c2.centerY = 6.0;
 		c2.radius = 6.0;
 		
+		System.out.println("////////////////////");
 		// TODO print c1 with toString
 		c1.toString();
 		// TODO print c2 with toString
@@ -64,8 +65,9 @@ public class DemoCircle {
 			System.out.println("c2.equals(c1) is true");
 		}
 		else {
-			System.out.println("c2c3.equals(c1) is false");
+			System.out.println("c2.equals(c1) is false");
 		}
+		
 	}
 
 }
