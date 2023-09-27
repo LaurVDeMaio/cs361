@@ -48,6 +48,8 @@ public class Reflection {
 		// Hint: Use the method getSuperClass()
 		
 		System.out.println("Inheritance chain:");
+		Object parent = o.getClass().getSuperclass();
+		
 		
 	}
 	
@@ -82,11 +84,13 @@ public class Reflection {
 
 		Reflection r = new Reflection();		
 		
-		// Demonstration of the methods on an objet of type String
+		// Demonstration of the methods on an object of type String
 		// TODO To complete
-		inheritanceChain(r);
+		Object x = new String();
+		x = "Hello World";
+		inheritanceChain(x);
 		
-		// Demonstration of the methods on an objet of type ColoredCircle
+		// Demonstration of the methods on an object of type ColoredCircle
 		// TODO To complete		
 	}
 
