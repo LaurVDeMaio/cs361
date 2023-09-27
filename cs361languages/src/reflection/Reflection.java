@@ -19,6 +19,8 @@ package reflection;
 
 import java.lang.reflect.Method;
 
+import circle.ColoredCircle;
+
 public class Reflection {
 
 	/**
@@ -49,7 +51,6 @@ public class Reflection {
 		
 		System.out.println("Inheritance chain:");
 		Object parent = o.getClass().getSuperclass();
-		
 		
 	}
 	
@@ -86,12 +87,13 @@ public class Reflection {
 		
 		// Demonstration of the methods on an object of type String
 		// TODO To complete
-		Object x = new String();
-		x = "Hello World";
-		inheritanceChain(x);
+		inheritanceChain("Hello World");
+		
 		
 		// Demonstration of the methods on an object of type ColoredCircle
 		// TODO To complete		
+		ColoredCircle cc = new ColoredCircle();
+		inheritanceChain(cc);
 	}
 
 }
