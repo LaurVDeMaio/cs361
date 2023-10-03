@@ -50,7 +50,20 @@ public class Reflection {
 		// Hint: Use the method getSuperClass()
 		
 		System.out.println("Inheritance chain:");
-		Object parent = o.getClass().getSuperclass();
+		while(true) {
+			Object parent = o.getClass().getSuperclass();
+			System.out.println("o.getClass: " + o.getClass());
+			System.out.println("parent: " + parent);
+			
+//			if(parent.getClass().getName().equals("java.lang.Object")) {
+//				break;
+//			}
+//			else {
+				o.equals(parent);
+				System.out.println("\no.getClass: " + o.getClass());
+				break;
+//			}
+		}
 		
 	}
 	
