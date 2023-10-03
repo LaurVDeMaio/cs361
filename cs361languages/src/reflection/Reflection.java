@@ -18,6 +18,7 @@ package reflection;
 // Complete the code
 
 import java.lang.reflect.Method;
+import java.util.List;
 
 import circle.ColoredCircle;
 
@@ -41,7 +42,7 @@ public class Reflection {
 	 * Cn inherits from Cn-1 inherits ... inherits from java.lang.Object
 	 * @param o the object
 	 */
-	public static void inheritanceChain(Object o) {		
+	public void inheritanceChain(Object o) {		
 		if (o == null)
 			throw new IllegalArgumentException("Object passesd is null");
 		
@@ -50,20 +51,17 @@ public class Reflection {
 		// Hint: Use the method getSuperClass()
 		
 		System.out.println("Inheritance chain:");
-		while(true) {
-			Object parent = o.getClass().getSuperclass();
-			System.out.println("o.getClass: " + o.getClass());
-			System.out.println("parent: " + parent);
-			
-//			if(parent.getClass().getName().equals("java.lang.Object")) {
-//				break;
-//			}
-//			else {
-				o.equals(parent);
-				System.out.println("\no.getClass: " + o.getClass());
-				break;
-//			}
+		
+		Class parent = o.getClass().getSuperclass();
+		
+		System.out.print(o.getClass().getName());
+		while(parent != null) 
+		{
+			System.out.print(" inherits from " + parent);
+			parent = parent.getSuperclass();
+			System.out.println();
 		}
+	
 		
 	}
 	
@@ -81,7 +79,11 @@ public class Reflection {
 		// TODO To complete
 		// Print each method on one line
 		// Use this EXACT format
-		System.out.println("\n");
+		System.out.println("Methods:");
+		
+		for(int i = 0; i < m.length; i++) {
+			System.out.println(m[i]);
+		}
 	}
 
 	/**
@@ -100,13 +102,15 @@ public class Reflection {
 		
 		// Demonstration of the methods on an object of type String
 		// TODO To complete
-		inheritanceChain("Hello World");
+		r.inheritanceChain("Hello World");
+		r.listMethods("Hello World");
 		
 		
 		// Demonstration of the methods on an object of type ColoredCircle
 		// TODO To complete		
 		ColoredCircle cc = new ColoredCircle();
-		inheritanceChain(cc);
+		r.inheritanceChain(cc);
+		r.listMethods(cc);
 	}
 
 }
