@@ -87,11 +87,11 @@ public class Circle extends GraphicObject implements Cloneable{
 	 */
 	@Override
 	protected Object clone() throws CloneNotSupportedException { 
-		Circle c2 = new Circle();
-		this.centerX = c2.centerX;
-		this.centerY = c2.centerY;
-		this.radius = c2.radius;
-		return c2;
+		Circle circ = new Circle();
+		this.centerX = circ.centerX;
+		this.centerY = circ.centerY;
+		this.radius = circ.radius;
+		return circ;
 	}
 
 }
