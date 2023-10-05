@@ -88,9 +88,9 @@ public class Circle extends GraphicObject implements Cloneable{
 	@Override
 	protected Object clone() throws CloneNotSupportedException { 
 		Circle circ = new Circle();
-		this.centerX = circ.centerX;
-		this.centerY = circ.centerY;
-		this.radius = circ.radius;
+		circ.centerX = this.centerX;
+		circ.centerY = this.centerY;
+		circ.radius = this.radius;
 		return circ;
 	}
 
